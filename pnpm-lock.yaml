@@ -5,8 +5,8 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@types/react': npm:types-react@19.0.0-alpha.3
-  '@types/react-dom': npm:types-react-dom@19.0.0-alpha.3
+  '@types/react': ^18.0.0
+  '@types/react-dom': ^18.0.0
 
 importers:
 
@@ -65,11 +65,11 @@ importers:
         specifier: 22.9.0
         version: 22.9.0
       '@types/react':
-        specifier: npm:types-react@19.0.0-alpha.3
-        version: types-react@19.0.0-alpha.3
+        specifier: ^18.3.12
+        version: 18.3.12
       '@types/react-dom':
-        specifier: npm:types-react-dom@19.0.0-alpha.3
-        version: types-react-dom@19.0.0-alpha.3
+        specifier: ^18.0.0
+        version: 18.3.1
       eslint:
         specifier: ^9
         version: 9.15.0(jiti@1.21.6)
@@ -407,6 +407,15 @@ packages:
 
   '@types/pg@8.11.6':
     resolution: {integrity: sha512-/2WmmBXHLsfRqzfHW7BNZ8SbYzE8OSk7i3WjFYvfgRHj7S1xj+16Je5fUKv3lVdVzk/zn9TXOqf+avFCFIE0yQ==}
+
+  '@types/prop-types@15.7.13':
+    resolution: {integrity: sha512-hCZTSvwbzWGvhqxp/RqVqwU999pBf2vp7hzIjiYOsl8wqOmUxkQ6ddw1cV3l8811+kdUFus/q4d1Y3E3SyEifA==}
+
+  '@types/react-dom@18.3.1':
+    resolution: {integrity: sha512-qW1Mfv8taImTthu4KoXgDfLuk4bydU6Q/TkADnDWWHwi4NX4BR+LWfTp2sVmTqRrsHvyDDTelgelxJ+SsejKKQ==}
+
+  '@types/react@18.3.12':
+    resolution: {integrity: sha512-D2wOSq/d6Agt28q7rSI3jhU7G6aiuzljDGZ2hTZHIkrTLUI+AF3WMeKkEZ9nN2fkBAlcktT6vcZjDFiIhMYEQw==}
 
   '@typescript-eslint/eslint-plugin@8.14.0':
     resolution: {integrity: sha512-tqp8H7UWFaZj0yNO6bycd5YjMwxa6wIHOLZvWPkidwbgLCsBMetQoGj7DPuAlWa2yGO3H48xmPwjhsSPPCGU5w==}
@@ -1926,12 +1935,6 @@ packages:
     resolution: {integrity: sha512-/OxDN6OtAk5KBpGb28T+HZc2M+ADtvRxXrKKbUwtsLgdoxgX13hyy7ek6bFRl5+aBs2yZzB0c4CnQfAtVypW/g==}
     engines: {node: '>= 0.4'}
 
-  types-react-dom@19.0.0-alpha.3:
-    resolution: {integrity: sha512-foCg3VSAoTLKBpU6FKgtHjOzqZVo7UVXfG/JnKM8imXq/+TvSGebj+KJlAVG6H1n+hiQtqpjHc+hk5FmZOJCqw==}
-
-  types-react@19.0.0-alpha.3:
-    resolution: {integrity: sha512-u7IEgvEgACYFDGtaqBgh5tqtYxkfPgtE7sl3RjfsT4QTpRM9FADXoWomFYZVi55Upii3LUcaZYrKFyHqUTHpew==}
-
   typescript@5.6.3:
     resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
     engines: {node: '>=14.17'}
@@ -2316,6 +2319,17 @@ snapshots:
       '@types/node': 22.9.0
       pg-protocol: 1.6.1
       pg-types: 4.0.2
+
+  '@types/prop-types@15.7.13': {}
+
+  '@types/react-dom@18.3.1':
+    dependencies:
+      '@types/react': 18.3.12
+
+  '@types/react@18.3.12':
+    dependencies:
+      '@types/prop-types': 15.7.13
+      csstype: 3.1.3
 
   '@typescript-eslint/eslint-plugin@8.14.0(@typescript-eslint/parser@8.14.0(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3)':
     dependencies:
@@ -4072,14 +4086,6 @@ snapshots:
       has-proto: 1.0.3
       is-typed-array: 1.1.13
       possible-typed-array-names: 1.0.0
-
-  types-react-dom@19.0.0-alpha.3:
-    dependencies:
-      '@types/react': types-react@19.0.0-alpha.3
-
-  types-react@19.0.0-alpha.3:
-    dependencies:
-      csstype: 3.1.3
 
   typescript@5.6.3: {}
 
